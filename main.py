@@ -3,9 +3,9 @@ from body import *
 from urllib.request import urlopen
 import streamlit as st
 
-url = 'https://ipinfo.io/json'
-response = urlopen(url)
-city_def = json.load(response)['city']
+# url = 'https://ipinfo.io/json'
+# response = urlopen(url)
+# city_def = json.load(response)['city']
 
 stream = st
 stream.set_page_config(layout='wide')
@@ -23,7 +23,7 @@ with col2:
 if but:
     global_is_day = body_main(stream, city)
 else:
-    global_is_day = body_main(stream, city_def)
+    global_is_day = body_main(stream, 'noida')
 
 search = '''
             <style>
